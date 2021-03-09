@@ -1,0 +1,11 @@
+﻿
+
+
+CREATE TABLE [dbo].[Cliente](
+	[id] [int] IDENTITY(1,1) primary key NOT NULL,
+	[CNPJ] [varchar](50) NOT NULL,
+	[RazaoSocial] [varchar](250) NOT NULL,
+	[Endereco] [varchar](255) NOT NULL,
+	[Cidade] [varchar](255) NOT NULL,
+	[UF] [varchar](2) NOT NULL,
+	[Data] [date] NULL)
