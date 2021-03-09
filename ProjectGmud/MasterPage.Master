@@ -20,7 +20,7 @@
                 <DynamicMenuStyle BackColor="#E3EAEB" />
                 <DynamicSelectedStyle BackColor="#1C5E55" />
                 <Items>
-                    <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Pages/Home/Home.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="Cadastro de Clientes" Value="Cadastro de Clientes" NavigateUrl="~/Pages/Cliente/CadastroCliente.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="Cadastro de Terceiros" Value="Cadastro de Terceiros" NavigateUrl="~/Pages/Prestador/CadastroPrestador.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="Cadastro de Gmuds" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>

@@ -70,6 +70,7 @@
     <Content Include="DAO\Querys.txt" />
     <Content Include="Pages\Cliente\CadastroCliente.aspx" />
     <Content Include="Pages\Gmud\CadastroGmud.aspx" />
+    <Content Include="Pages\Home\Home.aspx" />
     <Content Include="Pages\Prestador\CadastroPrestador.aspx" />
     <Content Include="root\css\site.css" />
     <Content Include="root\images\download.png" />
@@ -96,6 +97,13 @@
     </Compile>
     <Compile Include="Pages\Gmud\CadastroGmud.aspx.designer.cs">
       <DependentUpon>CadastroGmud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Prestador\CadastroPrestador.aspx.cs">
       <DependentUpon>CadastroPrestador.aspx</DependentUpon>
