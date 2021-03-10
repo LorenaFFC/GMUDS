@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -33,6 +35,13 @@ namespace ProjectGmud.Pages.Home
             sqlData.Fill(dtbl);
             TABELACONSULTA.DataSource = dtbl;
             TABELACONSULTA.DataBind();
+
+
+        }
+
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

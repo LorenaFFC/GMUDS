@@ -33,13 +33,14 @@
     border-radius: 20px 20px 20px 20px;
     background-color: #A6BAB7
 }
-
+.RelatorioClasse {
+    color: red;
+}
 .input-xlarge {
     background-color: #F5F5F5;
     padding: 8px;
     font-size: 12px;
     width: 380px;
-
 }
 
 .btn {
