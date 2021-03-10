@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="Content/CSS/Bootstrap.css" rel="stylesheet" />
-     <link href="~/root/css/site.css" rel="stylesheet" />
+    <link href="~/root/css/site.css" rel="stylesheet" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -14,16 +14,25 @@
 <body>
     <form id="form1" runat="server">
         <div class="navbar-header">
-            <asp:Menu class="menu" ID="Menu1" runat="server" ForeColor="#586E5E" Orientation="Horizontal" >
+            <asp:Menu class="menu" ID="Menu1" runat="server" ForeColor="#586E5E" Orientation="Horizontal">
                 <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
                 <DynamicMenuItemStyle HorizontalPadding="50px" VerticalPadding="20px" />
                 <DynamicMenuStyle BackColor="#E3EAEB" />
                 <DynamicSelectedStyle BackColor="#1C5E55" />
                 <Items>
                     <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Pages/Home/Home.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Cadastro de Clientes" Value="Cadastro de Clientes" NavigateUrl="~/Pages/Cliente/CadastroCliente.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Cadastro de Terceiros" Value="Cadastro de Terceiros" NavigateUrl="~/Pages/Prestador/CadastroPrestador.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Cadastro de Gmuds" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="CLIENTE">
+                        <asp:MenuItem Text="Cadastro de Clientes" Value="Cadastro de Clientes" NavigateUrl="~/Pages/Cliente/CadastroCliente.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Relatório de Clientes" Value="Relatorio de Clientes" NavigateUrl="~/Pages/Cliente/RelatorioCliente.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="PRESTADOR">
+                        <asp:MenuItem Text="Cadastro de Terceiros" Value="Cadastro de Terceiros" NavigateUrl="~/Pages/Prestador/CadastroPrestador.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Relatório de Terceiros" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="GMUDS">
+                        <asp:MenuItem Text="Cadastro de Gmuds" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Relatório de Gmuds" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#666666" ForeColor="White" />
                 <StaticMenuItemStyle HorizontalPadding="40px" VerticalPadding="15px" />
@@ -35,7 +44,8 @@
         <footer class="footer">
         </footer>
         <p>
-            &nbsp;</p>
+            &nbsp;
+        </p>
     </form>
 </body>
 </html>

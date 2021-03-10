@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="DAO\Querys.txt" />
     <Content Include="Pages\Cliente\CadastroCliente.aspx" />
+    <Content Include="Pages\Cliente\RelatorioCliente.aspx" />
     <Content Include="Pages\Gmud\CadastroGmud.aspx" />
     <Content Include="Pages\Home\Home.aspx" />
     <Content Include="Pages\Prestador\CadastroPrestador.aspx" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="Pages\Cliente\CadastroCliente.aspx.designer.cs">
       <DependentUpon>CadastroCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cliente\RelatorioCliente.aspx.cs">
+      <DependentUpon>RelatorioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cliente\RelatorioCliente.aspx.designer.cs">
+      <DependentUpon>RelatorioCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Gmud\CadastroGmud.aspx.cs">
       <DependentUpon>CadastroGmud.aspx</DependentUpon>
