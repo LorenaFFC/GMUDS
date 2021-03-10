@@ -26,6 +26,6 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
-
+    <br />
  <asp:Button runat="server"  class="btn" style="align-content: center" Text="Exportar Relatório" OnClick="RELATORIOCLIENTEEXCEL" />
 </asp:Content>

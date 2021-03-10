@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <h2 style=" text-align: center; font: Gill Sans; font-size: x-large">Relatório de Clientes</h2>
+ <h2 style=" text-align: center; font: Gill Sans; font-size: x-large">Relatório de GMUDS</h2>
         <asp:GridView ID="RELATORIOGMUD" runat="server" 
             AllowPaging="TRUE"
             PageSize="10"
@@ -26,6 +26,6 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
-
+    <br />
  <asp:Button runat="server"  class="btn" style="align-content: center" Text="Exportar Relatório" OnClick="RELATORIOGMUDEXCEL" />
 </asp:Content>

@@ -14,7 +14,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <h2 style=" text-align: center; font: Gill Sans; font-size: x-large">Relatório de Gmuds</h2>
+    <h2 style=" text-align: center; font: Gill Sans; font-size: x-large">Relatório de Demandas e Responsáveis</h2>
 
     <asp:GridView ID="TABELACONSULTA"  runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" CaptionAlign="Top" Font-Bold="False" HorizontalAlign="Center"  >
         <Columns>
@@ -42,7 +42,7 @@
 
 
     </asp:GridView>
-
+    <br />
     <asp:Button runat="server"  class="btn" style="align-content: center" Text="Exportar Relatório" OnClick="Unnamed1_Click" />
 
 </asp:Content>
