@@ -42,6 +42,26 @@ namespace ProjectGmud.Pages.Home
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
+            if (TABELACONSULTA.Visible)
+            {
+                Response.AddHeader("content-disposition", "attachment; filename = GridViewToExcel.xls");
+                Response.ContentType = "aplicativo / excel";
+                StringWriter sWriter = new StringWriter();
+                HtmlTextWriter hTextWriter = new HtmlTextWriter(sWriter);
+                TABELACONSULTA.RenderControl(hTextWriter);
+                Response.Write(sWriter.ToString());
+                Response.End();
+            }
+            else
+            {
+                Response.Write("<script> alert(' ERRADOO '); </script>");
+            }
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            /* Confirms that an HtmlForm control is rendered for the
+            /* specified ASP.NET server control at run time. */
         }
     }
 }

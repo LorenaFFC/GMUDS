@@ -53,6 +53,17 @@
     display: inline-block;
     font-size: 16px;
 }
+.btno {
+    background-color: #294454; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-items: center
+}
     .btn:hover {
         background-color: #4F83A1; /* Green */
         color: white;

@@ -13,7 +13,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    
     <h2 style=" text-align: center; font: Gill Sans; font-size: x-large">Relatório de Gmuds</h2>
 
     <asp:GridView ID="TABELACONSULTA"  runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" CaptionAlign="Top" Font-Bold="False" HorizontalAlign="Center"  >
@@ -30,7 +30,7 @@
 
 
         <FooterStyle BackColor="#CCCCCC" />
-        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor=#294454 Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
         <RowStyle BackColor="White" />
         <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
@@ -43,6 +43,6 @@
 
     </asp:GridView>
 
-    <asp:Button runat="server"  class="btn" Text="Exportar Relatório" OnClick="Unnamed1_Click" />
+    <asp:Button runat="server"  class="btn" style="align-content: center" Text="Exportar Relatório" OnClick="Unnamed1_Click" />
 
 </asp:Content>
