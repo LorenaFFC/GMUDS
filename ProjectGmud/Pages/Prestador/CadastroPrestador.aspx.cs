@@ -48,5 +48,10 @@ namespace ProjectGmud.Pages.Prestador
 
 
         }
+
+        protected void btnCancelPrestador_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/Home/Home.aspx");
+        }
     }
 }

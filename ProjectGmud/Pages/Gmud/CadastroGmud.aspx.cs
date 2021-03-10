@@ -124,6 +124,11 @@ namespace ProjectGmud.Pages.Gmud
             }
             return PrestadorId;
         }
+
+        protected void btnCancelarGmud_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/Home/Home.aspx");
+        }
     }
 }
 

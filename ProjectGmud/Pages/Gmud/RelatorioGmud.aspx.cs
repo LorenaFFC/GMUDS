@@ -2,52 +2,50 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ProjectGmud.Pages.Cliente
+namespace ProjectGmud.Pages.Gmud
 {
-    public partial class RelatorioCliente : System.Web.UI.Page
+    public partial class RelatorioGmud : System.Web.UI.Page
     {
         public int linha;
         public string UserId;
         private SqlConnection SQLConnection;
-        private SqlCommand SQLCommand;
-        private SqlDataReader SQLReader;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-                bindGridView();
+                gridRelatorioGmud();
         }
 
-        protected void RELATORIOCLIENTE_SelectedIndexChanged(object sender, GridViewPageEventArgs e)
+        protected void RELATORIOGMUD_SelectedIndexChanged(object sender, GridViewPageEventArgs e)
         {
-            RELATORIOCLIENTE.PageIndex = e.NewPageIndex;
-            bindGridView(); //bindgridview will get the data source and bind it again
+            RELATORIOGMUD.PageIndex = e.NewPageIndex;
+            gridRelatorioGmud(); //bindgridview will get the data source and bind it again
         }
-
-        private void bindGridView()
+        private void gridRelatorioGmud()
         {
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connStrig;
             connStrig = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
             SQLConnection = new SqlConnection(connStrig.ToString());
-            string QueryCliente = "SELECT * FROM GMUDS..Cliente ";
+            string QueryCliente = "SELECT id, Descricao, DataInicio, DataFim, StatusGmud FROM GMUDS..Gmud ";
             //open conection
             SQLConnection.Open();
             //SQLCommand = new SqlCommand(consulta, SQLConnection);
             SqlDataAdapter sqlData = new SqlDataAdapter(QueryCliente, SQLConnection);
             DataTable dtbl = new DataTable();
             sqlData.Fill(dtbl);
-            RELATORIOCLIENTE.DataSource = dtbl;
-            RELATORIOCLIENTE.DataBind();
+            RELATORIOGMUD.DataSource = dtbl;
+            RELATORIOGMUD.DataBind();
         }
 
-        protected void RELATORIOCLIENTEEXCEL(object sender, EventArgs e)
+
+        // FUNCTION EXPORTAR RELATORIO
+        protected void RELATORIOGMUDEXCEL(object sender, EventArgs e)
         {
             Response.Clear();
             Response.Buffer = true;
@@ -56,11 +54,11 @@ namespace ProjectGmud.Pages.Cliente
             Response.ContentType = "text/csv";
 
             //To Export all pages.
-            RELATORIOCLIENTE.AllowPaging = false;
-            this.bindGridView();
+            RELATORIOGMUD.AllowPaging = false;
+            this.gridRelatorioGmud();
 
             StringBuilder sb = new StringBuilder();
-            foreach (TableCell cell in RELATORIOCLIENTE.HeaderRow.Cells)
+            foreach (TableCell cell in RELATORIOGMUD.HeaderRow.Cells)
             {
                 //Append data with separator.
                 sb.Append(cell.Text + ',');
@@ -68,7 +66,7 @@ namespace ProjectGmud.Pages.Cliente
             //Append new line character.
             sb.Append("\r\n");
 
-            foreach (GridViewRow row in RELATORIOCLIENTE.Rows)
+            foreach (GridViewRow row in RELATORIOGMUD.Rows)
             {
                 foreach (TableCell cell in row.Cells)
                 {
@@ -86,13 +84,14 @@ namespace ProjectGmud.Pages.Cliente
 
         protected void OnPageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            RELATORIOCLIENTE.PageIndex = e.NewPageIndex;
-            this.bindGridView();
+            RELATORIOGMUD.PageIndex = e.NewPageIndex;
+            this.gridRelatorioGmud();
         }
         public override void VerifyRenderingInServerForm(Control control)
         {
             /* Confirms that an HtmlForm control is rendered for the
             /* specified ASP.NET server control at run time. */
         }
+
     }
 }

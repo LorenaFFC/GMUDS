@@ -26,7 +26,7 @@ namespace ProjectGmud.Pages.Home
             SQLConnection = new SqlConnection(connStrig.ToString());
 
             string consulta = "SELECT * FROM GMUDS.dbo.Prestador";
-            string testeconsulta = "SELECT GC.CNPJ , GC.RazaoSocial, GP.nome, GP.status, GG.DESCRICAO ,GG.STATUS FROM GMUDS..Cliente GC WITH(NOLOCK) INNER JOIN GMUDS..Gmud GG WITH(NOLOCK) ON GC.id = GG.idcliente INNER JOIN GMUDS..Prestador GP WITH(NOLOCK) ON GG.idPrestador = GP.id";
+            string testeconsulta = "SELECT GC.CNPJ , GC.RazaoSocial, GP.nome, GP.status, GG.DESCRICAO ,GG.StatusGmud FROM GMUDS..Cliente GC WITH(NOLOCK) INNER JOIN GMUDS..Gmud GG WITH(NOLOCK) ON GC.id = GG.idcliente INNER JOIN GMUDS..Prestador GP WITH(NOLOCK) ON GG.idPrestador = GP.id";
             //open conection
             SQLConnection.Open();
             //SQLCommand = new SqlCommand(consulta, SQLConnection);

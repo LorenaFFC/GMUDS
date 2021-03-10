@@ -40,7 +40,7 @@
                 <br />
 
                 <asp:Button ID="btnSavePrestador" runat="server" Text="Salvar" class="btn" OnClick="btnSavePrestador_Click" />
-                <asp:Button ID="btnCancelPrestador" runat="server" Text="Cancelar" class="btn" />
+                <asp:Button ID="btnCancelPrestador" runat="server" Text="Cancelar" class="btn" OnClick="btnCancelPrestador_Click" />
             </div>
 
 

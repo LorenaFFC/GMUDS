@@ -45,7 +45,7 @@
                 <br />
 
                 <asp:Button ID="btnSaveGmud" runat="server" Text="Salvar" class="btn" OnClick="btnSaveGmud_Click" />
-                <asp:Button ID="btnCancelarGmud" runat="server" Text="Cancelar" class="btn" />
+                <asp:Button ID="btnCancelarGmud" runat="server" Text="Cancelar" class="btn" OnClick="btnCancelarGmud_Click"   />
             </div>
 
 

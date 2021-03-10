@@ -23,7 +23,7 @@
             <asp:BoundField DataField="nome" HeaderText="Prestador"/>
             <asp:BoundField DataField="status" HeaderText="Status Prestador"/>
             <asp:BoundField DataField="DESCRICAO" HeaderText="Descrição Demanda"/>
-            <asp:BoundField DataField="STATUS" HeaderText="Status Demanda"/>
+            <asp:BoundField DataField="StatusGmud" HeaderText="Status Demanda"/>
 
         </Columns>
         

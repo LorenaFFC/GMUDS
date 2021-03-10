@@ -74,6 +74,9 @@ namespace ProjectGmud.Pages.Cliente
             }
         }
 
-  
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/Home/Home.aspx");
+        }
     }
 }

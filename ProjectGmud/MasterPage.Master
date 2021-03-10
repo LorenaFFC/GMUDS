@@ -27,11 +27,11 @@
                     </asp:MenuItem>
                     <asp:MenuItem Text="PRESTADOR">
                         <asp:MenuItem Text="Cadastro de Terceiros" Value="Cadastro de Terceiros" NavigateUrl="~/Pages/Prestador/CadastroPrestador.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Relatório de Terceiros" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Relatório de Terceiros" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Prestador/RelatorioTerceiros.aspx"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="GMUDS">
                         <asp:MenuItem Text="Cadastro de Gmuds" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Relatório de Gmuds" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/CadastroGmud.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Relatório de Gmuds" Value="Cadastro de Gmuds" NavigateUrl="~/Pages/Gmud/RelatorioGmud.aspx"></asp:MenuItem>
                     </asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#666666" ForeColor="White" />

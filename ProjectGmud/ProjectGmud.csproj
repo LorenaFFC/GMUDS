@@ -71,8 +71,10 @@
     <Content Include="Pages\Cliente\CadastroCliente.aspx" />
     <Content Include="Pages\Cliente\RelatorioCliente.aspx" />
     <Content Include="Pages\Gmud\CadastroGmud.aspx" />
+    <Content Include="Pages\Gmud\RelatorioGmud.aspx" />
     <Content Include="Pages\Home\Home.aspx" />
     <Content Include="Pages\Prestador\CadastroPrestador.aspx" />
+    <Content Include="Pages\Prestador\RelatorioTerceiros.aspx" />
     <Content Include="root\css\site.css" />
     <Content Include="root\images\download.png" />
     <Content Include="Web.config" />
@@ -106,6 +108,13 @@
     <Compile Include="Pages\Gmud\CadastroGmud.aspx.designer.cs">
       <DependentUpon>CadastroGmud.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Gmud\RelatorioGmud.aspx.cs">
+      <DependentUpon>RelatorioGmud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Gmud\RelatorioGmud.aspx.designer.cs">
+      <DependentUpon>RelatorioGmud.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Home\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,6 +128,13 @@
     </Compile>
     <Compile Include="Pages\Prestador\CadastroPrestador.aspx.designer.cs">
       <DependentUpon>CadastroPrestador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Prestador\RelatorioTerceiros.aspx.cs">
+      <DependentUpon>RelatorioTerceiros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Prestador\RelatorioTerceiros.aspx.designer.cs">
+      <DependentUpon>RelatorioTerceiros.aspx</DependentUpon>
     </Compile>
     <Compile Include="PO\Cliente.cs" />
     <Compile Include="PO\Enum\Servicos.cs" />
