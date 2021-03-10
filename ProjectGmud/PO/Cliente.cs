@@ -31,5 +31,22 @@ namespace ProjectGmud.PO
             DataCadastro = dataCadastro;
             Servicos = servicos;
         }
+
+        public bool validation()
+        {
+            //nulo vazio ou bco
+            return string.IsNullOrWhiteSpace(this.CNPJ);
+
+          /*  if (txtCNPJ.Text != null
+                   && txtCNPJ.Text != ""
+                   && txtCidade.Text != null
+                   && txtCidade.Text != ""
+                   && txtEndereco.Text != null
+                   && txtEndereco.Text != ""
+                   && txtRS.Text != null
+                   && txtRS.Text != ""
+                   && selectUF.Value != ""
+                   && selectUF.Value != null)*/
+        }
     }
 }

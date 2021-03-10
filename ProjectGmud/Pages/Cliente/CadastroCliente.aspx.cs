@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ProjectGmud.PO;
 
 namespace ProjectGmud.Pages.Cliente
 {
@@ -30,6 +31,7 @@ namespace ProjectGmud.Pages.Cliente
             //Validação de Campos
             try
             {
+                var cliente = new ProjectGmud.PO.Cliente();
                 
                 if (txtCNPJ.Text != null
                     && txtCNPJ.Text != ""

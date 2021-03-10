@@ -12,6 +12,7 @@ namespace ProjectGmud.Pages.Prestador
 {
     public partial class CadastroPrestador : System.Web.UI.Page
     {
+        double valorHora;
         private SqlConnection SQLConnection;
         private SqlCommand SQLCommand;
         protected void Page_Load(object sender, EventArgs e)
@@ -34,9 +35,8 @@ namespace ProjectGmud.Pages.Prestador
             SQLConnection = new SqlConnection(connStrig.ToString());
 
             
-
             string SQLQuery = "INSERT INTO GMUDS.dbo.Prestador ( nome, CPF, CNPJ, DtAdmissao,VlrHra,status)" +
-                   "VALUES ('" + txPNome.Text.Trim() + "','" + txPCPF.Text.Trim() + "','" + txPCNPJ.Text.Trim() + "', '" + txPAdmissao.Text.Trim() + "', '" + txpVlrHra.Text.Trim()+ "', '" + selectStatusPrestador.Value.Trim()  + "')";
+                   "VALUES ('" + txPNome.Text.Trim() + "','" + txPCPF.Text.Trim() + "','" + txPCNPJ.Text + "', '" + txPAdmissao.Text.Trim() + "', '" + txpVlrHra.Text + "', '" + selectStatusPrestador.Value.Trim()  + "')";
 
 
 
@@ -53,5 +53,7 @@ namespace ProjectGmud.Pages.Prestador
         {
             Response.Redirect("~/Pages/Home/Home.aspx");
         }
+
+     
     }
 }

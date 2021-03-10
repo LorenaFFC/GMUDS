@@ -34,7 +34,7 @@ namespace ProjectGmud.Pages.Gmud
 
         protected void btnSaveGmud_Click(object sender, EventArgs e)
         {
-          
+
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connStrig;
             connStrig = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
@@ -47,7 +47,7 @@ namespace ProjectGmud.Pages.Gmud
                 int iddd = btnbuscar_Click(cnpjj);
                 int idPrestador = buscarPrestador(CPFPrest);
                 //  Response.Write("<script> alert('" + iddd + "'); </script>");
-                string SQLQuery = "INSERT INTO GMUDS.dbo.Gmud ( Descricao, DataInicio, DataFim, idcliente,idPrestador, Status)" +
+                string SQLQuery = "INSERT INTO GMUDS.dbo.Gmud ( Descricao, DataInicio, DataFim, idcliente,idPrestador, StatusGmud)" +
                    "VALUES ('" + txtDescricao.Text.Trim() + "','" + txtInicio.Text.Trim() + "','" + txtFim.Text.Trim() + "', '" + iddd + "', '" + idPrestador + "', '" + selectStatusGmud.Value.Trim() + "')";
 
 
@@ -63,7 +63,7 @@ namespace ProjectGmud.Pages.Gmud
             }
         }
 
-        protected int  btnbuscar_Click(string cnpj )
+        protected int btnbuscar_Click(string cnpj)
         {
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connStrig;
@@ -72,7 +72,7 @@ namespace ProjectGmud.Pages.Gmud
 
             try
             {
-                string SQLbuscaID = "select id from GMUDS.dbo.Cliente Where CNPJ = '" + cnpj + "'";
+                string SQLbuscaID = "select id from GMUDS.dbo.Cliente Where CNPJ = '"+cnpj+"'";
                 SQLCommand = new SqlCommand(SQLbuscaID, SQLConnection);
 
                 SQLConnection.Open();
@@ -82,7 +82,7 @@ namespace ProjectGmud.Pages.Gmud
                 while (SQLReader.Read())
                 {
                     UserId = (int)SQLReader["id"];
-                   
+
                 }
                 SQLConnection.Close();
                 return UserId;
@@ -103,7 +103,7 @@ namespace ProjectGmud.Pages.Gmud
 
             try
             {
-                string SQLbuscaIDPrestador = "select id from GMUDS.dbo.Prestador Where CPF = '" + cpf + "'";
+                string SQLbuscaIDPrestador = "select id from GMUDS.dbo.Prestador Where CPF = '"+cpf+"'";
                 SQLCommand = new SqlCommand(SQLbuscaIDPrestador, SQLConnection);
 
                 SQLConnection.Open();
@@ -131,4 +131,3 @@ namespace ProjectGmud.Pages.Gmud
         }
     }
 }
-

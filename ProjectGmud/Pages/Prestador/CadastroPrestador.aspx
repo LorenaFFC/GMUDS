@@ -23,12 +23,14 @@
                 <br />
                 Data Admissao
                    <br />
-                <asp:TextBox ID="txPAdmissao" runat="server" class="input-xlarge" ></asp:TextBox>
+                <asp:TextBox ID="txPAdmissao" runat="server" class="input-xlarge"   type ="date"></asp:TextBox>
                 <br />
                 <br />
                 Valor Hora
                    <br />
-                <asp:TextBox ID="txpVlrHra" runat="server" class="input-xlarge" ></asp:TextBox>
+              <asp:TextBox ID="txpVlrHra" runat="server" class="input-xlarge"   type ="text"></asp:TextBox>
+                
+                
                 <br />
                 <br />
                 Status
